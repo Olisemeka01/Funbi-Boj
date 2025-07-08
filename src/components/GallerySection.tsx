@@ -1,5 +1,12 @@
 
 import { useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const GallerySection = () => {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
@@ -32,22 +39,24 @@ const GallerySection = () => {
     <section className="py-20 px-4 bg-white/50 dark:bg-gray-800/30 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 font-poppins">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 font-poppins animate-fade-in-up">
             Our Moments 📸
           </h2>
           <div className="flex items-center justify-center mb-6">
-            <span className="animate-pulse-heart text-3xl text-red-500">💝</span>
+            <span className="animate-bounce-heart text-3xl text-red-500">💝</span>
           </div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animate-fade-in-up">
             Every picture tells a story, and our story is my favorite one to tell
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105"
+              className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
               onMouseEnter={() => setHoveredImage(index)}
               onMouseLeave={() => setHoveredImage(null)}
             >
@@ -70,6 +79,37 @@ const GallerySection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden animate-fade-in-up">
+          <Carousel className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-80 object-cover"
+                    />
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </div>
+
+                    <div className="absolute top-4 right-4">
+                      <span className="text-2xl animate-pulse-heart">❤️</span>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </div>
       </div>
     </section>
