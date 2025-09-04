@@ -19,7 +19,7 @@ const ContactSection = () => {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-transparent to-romantic-pink/20 dark:to-gray-900/50">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6 font-poppins">
             Stay Connected 💬
           </h2>
@@ -58,7 +58,7 @@ const ContactSection = () => {
               <span className="text-lg">Call Me Maybe? 📞</span>
             </div>
           </Button>
-        </div>
+        </div> */}
 
         <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-romantic-pink/20 dark:border-gray-700/50">
           <div className="flex items-center justify-center mb-6">

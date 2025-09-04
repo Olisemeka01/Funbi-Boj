@@ -17,7 +17,7 @@ const HeroSection = () => {
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-6 font-poppins">
-          Hey Babe <span className="animate-heart-beat text-red-500">❤️</span>
+          Hey Pooks <span className="animate-heart-beat text-red-500">❤️</span>
         </h1>
         
         <div className="mb-8 h-12 flex items-center justify-center">

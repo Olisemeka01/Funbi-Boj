@@ -19,7 +19,7 @@ const LoveNoteSection = () => {
           
           <div className="space-y-6 text-lg md:text-xl leading-relaxed">
             <p className="font-great-vibes text-2xl md:text-3xl text-deep-rose dark:text-romantic-pink">
-              My Dearest Love,
+              My Dearest Funmbi,
             </p>
             
             <p className="text-gray-700 dark:text-gray-200">
@@ -38,7 +38,7 @@ const LoveNoteSection = () => {
             </p>
             
             <div className="flex items-center justify-center mt-8">
-              <span className="animate-bounce-heart text-3xl">💕</span>
+              <span className="animate-bounce-heart text-3xl">Boj💕</span>
             </div>
           </div>
           
