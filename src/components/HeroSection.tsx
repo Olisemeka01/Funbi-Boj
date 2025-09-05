@@ -33,7 +33,7 @@ const HeroSection = () => {
             Welcome to our little corner of the internet, where every pixel is filled with love for you 💕
           </p>
           
-          <div className="flex items-center justify-center space-x-2 text-deep-rose dark:text-romantic-pink animate-fade-in-up" style={{ animationDelay: '1s' }}>
+          <div className="flex items-center justify-center space-x-2 text-black-700 dark:text-romantic-pink animate-fade-in-up" style={{ animationDelay: '1s' }}>
             <span className="animate-sparkle">💖</span>
             <span className="text-sm font-medium">Scroll down to explore our story</span>
             <span className="animate-sparkle">💖</span>

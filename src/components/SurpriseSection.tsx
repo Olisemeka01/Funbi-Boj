@@ -8,11 +8,9 @@ const SurpriseSection = () => {
   const [currentSurprise, setCurrentSurprise] = useState(0);
 
   const surprises = [
-    "Remember our first date? I knew you were the one when you laughed at my terrible dad jokes! 😂",
-    "You make my coffee taste better just by being there in the morning ☕️💕",
-    "I love how you scrunch your nose when you're thinking really hard about something 🥰",
-    "Dancing with you in the kitchen is my favorite kind of party 💃🕺",
-    "You're the reason I believe in fairy tales and happy endings ✨👑"
+    "Your gap tooth is so beautiful to see when you're cheesing and laughing.",
+    "Your bumbum is like God bringing heaven down to earth for me 😼💕",
+    "Every time I'm cuddled up with you, it feels like the world is softer and I'm floating in space that has your face plastered on all the planets and stars."
   ];
 
   const handleSurpriseClick = () => {

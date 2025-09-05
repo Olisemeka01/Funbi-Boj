@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import { GallerySection } from '@/components/GallerySection';
@@ -16,11 +15,11 @@ const Index = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-romantic-pink/20 via-soft-rose/30 to-deep-rose/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-blue-500 dark:bg-gray-900 relative overflow-hidden">
       <FloatingHearts />
       <ThemeToggle theme={theme} onToggle={toggleTheme} />
       
@@ -29,7 +28,6 @@ const Index = () => {
         <GallerySection />
         <LoveNoteSection />
         <SurpriseSection />
-        <ContactSection />
       </div>
     </div>
   );

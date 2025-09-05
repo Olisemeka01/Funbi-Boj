@@ -19,7 +19,7 @@ const LoveNoteSection = () => {
           
           <div className="space-y-6 text-lg md:text-xl leading-relaxed">
             <p className="font-great-vibes text-2xl md:text-3xl text-deep-rose dark:text-romantic-pink">
-              My Dearest Funmbi,
+              My Dearest Funbiii,
             </p>
             
             <p className="text-gray-700 dark:text-gray-200">
